@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Little Horse Architecture" />
+		<Option pch_mode="2" />
+		<Option compiler="tdm_gcc_64_compiler" />
+		<Build>
+			<Target title="Debug">
+				<Option output="lib/lharch-d" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).a" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="tdm_gcc_64_compiler" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="libsfml-audio-d.a" />
+					<Add library="libsfml-graphics-d" />
+					<Add library="libsfml-main-d" />
+					<Add library="libsfml-network-d" />
+					<Add library="libsfml-system-d" />
+					<Add library="libsfml-window-d" />
+					<Add directory="$(#SFML)/build-dynamic-d/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="lib/lharch" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).a" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="tdm_gcc_64_compiler" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libsfml-audio" />
+					<Add library="libsfml-graphics" />
+					<Add library="libsfml-main" />
+					<Add library="libsfml-network" />
+					<Add library="libsfml-system" />
+					<Add library="libsfml-window" />
+					<Add directory="$(#SFML)/build-dynamic/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="./Include" />
+			<Add directory="$(#SFML.include)" />
+		</Compiler>
+		<Unit filename="include/Background.hpp" />
+		<Unit filename="include/Core.hpp" />
+		<Unit filename="include/InputManager.hpp" />
+		<Unit filename="include/Menu.hpp" />
+		<Unit filename="include/MenuControls/Button.hpp" />
+		<Unit filename="include/MenuControls/ControlBase.hpp" />
+		<Unit filename="include/MenuControls/ControlsShared.hpp" />
+		<Unit filename="include/MenuControls/Image.hpp" />
+		<Unit filename="include/MenuControls/Label.hpp" />
+		<Unit filename="include/MenuControls/Selector.hpp" />
+		<Unit filename="include/MenuControls/StaticBox.hpp" />
+		<Unit filename="include/Object.hpp" />
+		<Unit filename="include/ResourceManager.hpp" />
+		<Unit filename="include/Scene.hpp" />
+		<Unit filename="include/Settings.hpp" />
+		<Unit filename="include/Utilities.hpp" />
+		<Unit filename="src/Background.cpp" />
+		<Unit filename="src/Core.cpp" />
+		<Unit filename="src/InputManager.cpp" />
+		<Unit filename="src/Menu.cpp" />
+		<Unit filename="src/MenuControls/Button.cpp" />
+		<Unit filename="src/MenuControls/ControlBase.cpp" />
+		<Unit filename="src/MenuControls/Image.cpp" />
+		<Unit filename="src/MenuControls/Label.cpp" />
+		<Unit filename="src/MenuControls/Selector.cpp" />
+		<Unit filename="src/MenuControls/StaticBox.cpp" />
+		<Unit filename="src/Object.cpp" />
+		<Unit filename="src/ResourceManager.cpp" />
+		<Unit filename="src/Scene.cpp" />
+		<Unit filename="src/Settings.cpp" />
+		<Unit filename="src/Utilities.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
