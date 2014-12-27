@@ -18,7 +18,7 @@ public:
 	void setSize(const float& x, const float& y) {
 		m_Box.setSize(sf::Vector2f(x,y));
 	}
-	sf::Vector2f getSize() {
+	const sf::Vector2f& getSize() {
 		return m_Box.getSize();
 	}
 	void getSize(float* x, float* y) const {

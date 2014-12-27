@@ -13,7 +13,7 @@ Core::Core() {
 
 	m_ResManager = new ResourceManager();
 	m_InputMan = new InputManager(this);
-	getResourceManager()->loadFont("Gentium", "Gentium-R.ttf",Global);
+	getResourceManager()->loadFont("Gentium", "Gentium-R.ttf", Global);
 }
 
 Core::Core(Settings* sett) : Core() {

@@ -29,7 +29,7 @@ public:
 	void setColour(const sf::Color& clr) {
 		m_Text.setColor(clr);
 	}
-	sf::Color getColour() {
+	const sf::Color& getColour() {
 		return m_Text.getColor();
 	}
 protected:

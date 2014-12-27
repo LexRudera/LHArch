@@ -26,9 +26,9 @@ public:
 protected:
 private:
 	bool m_ShowFps;
-	sf::VideoMode m_VideoMode;
 	bool m_DebugLines;
 	bool m_DebugHitboxes;
+	sf::VideoMode m_VideoMode;
 };
 }
 #endif // SETTINGS_H
