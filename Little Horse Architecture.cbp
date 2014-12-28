@@ -16,7 +16,7 @@
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add library="libsfml-audio-d.a" />
+					<Add library="libsfml-audio-d" />
 					<Add library="libsfml-graphics-d" />
 					<Add library="libsfml-main-d" />
 					<Add library="libsfml-network-d" />

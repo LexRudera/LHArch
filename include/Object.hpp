@@ -38,6 +38,9 @@ public:
 	void deactivateLogic() {
 		m_Logic = false;
 	}
+	int id(){
+		return reinterpret_cast<long long>(this);
+	}
 protected:
 	virtual Object* doCopy(Object*) = 0;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const = 0;
