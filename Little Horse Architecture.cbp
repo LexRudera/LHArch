@@ -16,13 +16,12 @@
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add library="libsfml-audio-s-d.a" />
-					<Add library="libsfml-graphics-s-d.a" />
-					<Add library="libsfml-main-d.a" />
-					<Add library="libsfml-network-s-d.a" />
-					<Add library="libsfml-system-s-d.a" />
-					<Add library="libsfml-window-s-d.a" />
-					<Add directory="$(#SFML)/build-static-d/lib" />
+					<Add library="sfml-audio-d-2" />
+					<Add library="sfml-graphics-d-2" />
+					<Add library="sfml-network-d-2" />
+					<Add library="sfml-system-d-2" />
+					<Add library="sfml-window-d-2" />
+					<Add directory="$(#SFML)/build-dynamic-d/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -35,18 +34,14 @@
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
+					<Add library="sfml-audio-2" />
+					<Add library="sfml-graphics-2" />
+					<Add library="sfml-network-2" />
+					<Add library="sfml-system-2" />
+					<Add library="sfml-window-2" />
 					<Add option="-s" />
-					<Add library="libsfml-audio-s.a" />
-					<Add library="libsfml-graphics-s.a" />
-					<Add library="libsfml-main.a" />
-					<Add library="libsfml-network-s.a" />
-					<Add library="libsfml-system-s.a" />
-					<Add library="libsfml-window-s.a" />
-					<Add directory="$(#SFML)/build-static/lib" />
+					<Add directory="$(#SFML)/build-dynamic/lib" />
 				</Linker>
-				<ExtraCommands>
-					<Add after="python embedStaticLinking.py release $(#SFML)\build-dynamic\lib" />
-				</ExtraCommands>
 			</Target>
 		</Build>
 		<Compiler>
